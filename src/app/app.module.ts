@@ -1,18 +1,40 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {AppRoutingModule} from './app-routing.module';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import {AppComponent} from './app.component';
+import {ButtonModule} from 'primeng/button';
+import { EmpleadosComponent } from './empleados/empleados.component';
+import { InputTextModule } from 'primeng/inputtext';
+import { InputNumberModule } from 'primeng/inputnumber';
+import {InputSwitchModule} from "primeng/inputswitch";
+import {CalendarModule} from "primeng/calendar";
+import {PanelModule} from "primeng/panel";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    EmpleadosComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    BrowserAnimationsModule,
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+
+    ButtonModule,
+    InputNumberModule,
+    InputTextModule,
+    InputSwitchModule,
+    CalendarModule,
+    PanelModule,
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
